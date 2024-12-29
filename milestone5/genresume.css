@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Red: #136c66;
+  --Dark: #006a80;
+  --text-white: white;
+  --text-dark: gray;
+}
+.container {
+  display: none;
+}
+
+/* Resume Output */
+.generate-Resume {
+  position: relative;
+  max-width: 19cm;
+  min-height: 27.9cm;
+  display: flex;
+  margin: auto;
+  background-color: white;
+}
+
+/* Resume Left Portion for About Me, Personal Info, Languages ETC. */
+.left-Portion {
+  color: var(--text-white);
+  width: 35%;
+  margin-left: 2rem;
+  background-color: var(--Dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile Image */
+img {
+  z-index: 100;
+  width: 230px;
+  position: relative;
+  height: 230px;
+  margin-top: 3.8rem;
+  border: 3px solid var(--Red);
+  border-radius: 50%;
+}
+
+/* Name & Designation */
+.section-Name {
+  width: 100%;
+  z-index: 10;
+  margin-top: 7rem;
+  padding: 1rem;
+  padding-left: 43%;
+  position: absolute;
+  background-color: var(--Red);
+  color: var(--text-white);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Name & Designation for Media Query */
+
+.section-NameMQ {
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 3rem 1.5rem;
+  background-color: var(--Red);
+}
+.name {
+  outline: none;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.designation {
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+/* About Me */
+.heading-AboutMe {
+  outline: none;
+  margin: 1.5rem 0rem 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.para-AboutMe {
+  outline: none;
+  width: 80%;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+}
+
+/* Contact Info */
+.contact-Sec {
+  padding: 0.5rem;
+  margin: 0rem 1rem 1rem 1rem;
+}
+.contact-Info {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+.info-Icon {
+  background-color: var(--Red);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.fa-solid {
+  font-size: 0.7rem;
+  text-align: center;
+  align-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.info-Text {
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* Languages Known */
+.languages-Sec {
+  width: 70%;
+  padding: 6px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--Red);
+  background-color: var(--text-white);
+  margin-bottom: 1rem;
+}
+.heading-Language {
+  outline: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.languages-List {
+  width: 60%;
+  margin-bottom: 1.8rem;
+}
+
+.list {
+  outline: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 0.2rem;
+}
+.dot {
+  margin-right: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-white);
+}
+
+.none {
+  outline: none;
+}
+
+/* Expertise Known */
+.expertise-Sec {
+  width: 70%;
+  padding: 6px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--Red);
+  background-color: var(--text-white);
+  margin-bottom: 1rem;
+}
+.heading-Expertise {
+  outline: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.expertise-list {
+  width: 60%;
+  margin-bottom: 6rem;
+}
+/*Left Portions Ends Here */
+
+/* Resume Right Portion for Experience, Education & Skills */
+.right-Portion {
+  padding-top: 18rem;
+  padding-left: 1.2rem;
+  width: 57%;
+}
+
+/* Experience Section */
+.section-Experience {
+  width: 15rem;
+  padding: 6px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--text-white);
+  background-color: var(--Red);
+  margin-bottom: 0.7rem;
+}
+.heading-Experience {
+  outline: none;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.add-Sec-Experience {
+  padding-left: 1rem;
+}
+.title-Experience {
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.comp-Experience {
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.para-Experience {
+  outline: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Education Section */
+.section-Education {
+  width: 15rem;
+  padding: 6px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--text-white);
+  background-color: var(--Red);
+  margin-bottom: 0.7rem;
+}
+.heading-Education {
+  outline: none;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.add-Sec-Education {
+  padding-left: 1rem;
+}
+.institute-Education {
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.degree-Education {
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.year-Education {
+  outline: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Skills Section */
+.section-Skills {
+  width: 15rem;
+  padding: 6px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--text-white);
+  background-color: var(--Red);
+  margin-bottom: 0.7rem;
+}
+.heading-Skills {
+  outline: none;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skills-List-Sec {
+  padding-left: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+#skill-List {
+  display: flex;
+  align-items: center;
+}
+.dot-Skill {
+  margin-right: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+
+/* Responsive Setup */
+@media screen and (max-width: 700px) {
+  /* Resume Generator */
+  .generate-Resume {
+    display: block;
+  }
+
+  /* Resume Left Portion */
+  .left-Portion {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  /* Profile Image */
+  img {
+    width: 300px;
+    height: 300px;
+  }
+  /* Name & Designation */
+  .section-Name {
+    display: none;
+  }
+  .section-NameMQ {
+    display: flex;
+  }
+
+  /* Languages Known */
+  .languages-Sec {
+    width: 60%;
+  }
+  .languages-List {
+    width: 40%;
+  }
+  /* Expertise Known */
+  .expertise-Sec {
+    width: 60%;
+  }
+  .expertise-list {
+    width: 40%;
+  }
+
+  /* Resume Right Portion */
+  .right-Portion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0.8rem 0rem 0.8rem;
+    text-align: center;
+  }
+
+  /* Experience Section */
+  .add-Sec-Experience {
+    padding-left: 0rem;
+  }
+
+  /* Education Section */
+  .add-Sec-Education {
+    padding-left: 0rem;
+  }
+
+  /* Skills Section */
+  .skills-List-Sec {
+    padding-left: 0rem;
+  }
+  .dot-Skill {
+    display: none;
+  }
+}

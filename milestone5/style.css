@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Red-Color: rgb(75, 159, 255);
+  --Dark-Color: #136c66;
+  --text-white: rgb(255, 255, 255);
+  --text-dark: rgb(255, 255, 255);
+  --Border: #ff41ef;
+  box-shadow: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #e2e2e2;
+}
+
+/* Main Container */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Page Heading - NavBar */
+.nav-Bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 20px 100px;
+  background-color: var(--Dark-Color);
+  color: rgb(247, 247, 247);
+  border-bottom: 3px solid var(--Red-Color);
+}
+.page-Heading {
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.page-SubHeading {
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Button for Filling Dummy Information */
+.dummy-Info {
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--Red-Color);
+  background-color: var(--Red-Color);
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  color: var(--text-white);
+  font-weight: 600;
+  transition: 0.5s;
+}
+.dummy-Info:hover {
+  background-color: var(--text-white);
+  color: var(--Red-Color);
+}
+
+/* Input Form Styling */
+#resume-Form {
+  gap: 3rem;
+  display: flex;
+  padding: 0.5rem 2rem;
+  max-width: 1100px;
+}
+.form-Sec {
+  width: 100%;
+}
+/* Input Section Heading */
+.input-Heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.2rem 0rem 0.3rem;
+}
+/* Input Label Text */
+.input-Label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+/* Input Field Styling */
+.form-input {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid var(--Border);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+  outline: none;
+}
+.form-input:focus {
+  background-color: var(--Dark-Color);
+  color: var(--text-white);
+}
+
+#lang-Div,
+#expertise-Div,
+.experience-Sec,
+#education-Sec,
+#skill-div {
+  margin-bottom: 0.8rem;
+}
+/* "Add More" Button Styling */
+.add-Button {
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--Red-Color);
+  background-color: var(--Red-Color);
+  padding: 0.4rem 1.2rem;
+  border-radius: 25px;
+  color: black;
+  font-weight: 500;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+.add-Button:hover {
+  background-color: var(--text-white);
+  color: var(--Red-Color);
+}
+/* Delete Button Styling */
+.del-Button {
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--Dark-Color);
+  background-color: var(--Dark-Color);
+  padding: 0.4rem 1.2rem;
+  border-radius: 25px;
+  color: var(--text-white);
+  font-weight: 500;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+.del-Button:hover {
+  background-color: var(--text-white);
+  color: var(--Dark-Color);
+}
+/* Delete button Display none */
+#del-Lang-Btn {
+  display: none;
+}
+#del-Expert-Btn {
+  display: none;
+}
+#del-Skill-Btn {
+  display: none;
+}
+#del-Education-Btn {
+  display: none;
+}
+#del-Experi-Btn {
+  margin-top: 0.6rem;
+  display: none;
+}
+
+/* Buttons of Generating Download Link */
+.buttons-Gen-Down-Link {
+  margin-bottom: 0.5rem;
+}
+.buttons {
+  cursor: pointer;
+  width: 190px;
+  height: 35px;
+  border: none;
+  border: 1px solid var(--Dark-Color);
+  background-color: var(--Dark-Color);
+  border-radius: 7px;
+  color: black;
+  font-weight: 600;
+  transition: 0.5s;
+  margin: 1rem;
+}
+.buttons:hover {
+  font-weight: 900;
+  background-color: var(--text-white);
+  color: var(--Dark-Color);
+}
+
+/* Customize Colors */
+.buttons-Color {
+  padding: 2rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.color-Text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.color-Styling {
+  cursor: pointer;
+  width: 3rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+  border: none;
+}
+
+/* Media Query */
+@media screen and (max-width: 700px) {
+  /* Main Page Heading - NavBar */
+  .nav-Bar {
+    display: block;
+  }
+  /* Button for Filling Dummy Information */
+  .dummy-Info {
+    padding: 0.4rem 1rem;
+    margin: 1rem auto;
+    font-size: 0.7rem;
+  }
+  /* Input Form Styling */
+  #resume-Form {
+    display: block;
+  }
+
+  /* Buttons of Generating Download Link */
+  .buttons-Gen-Down-Link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .buttons {
+    width: 175px;
+    margin: 0.4rem;
+  }
+}

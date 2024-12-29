@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume by Danish Bawany</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="genresume.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <!-- Main Page Heading -->
+      <nav class="nav-Bar">
+        <div class="nav-Right">
+          <h1 class="page-Heading">Resume Builder</h1>
+          <p class="page-SubHeading">by Danish Bawany</p>
+        </div>
+
+        <!-- Button for Filling Dummy Information -->
+        <button onclick="dummyInfo()" class="dummy-Info" id="Dummy-Info">
+          Fill Dummy Data
+        </button>
+      </nav>
+
+      <!-- Input Form -->
+      <form id="resume-Form">
+        <!-- Personal Info Section -->
+        <div class="form-Sec">
+          <!-- Input Section Heading -->
+          <h3 class="input-Heading">Personal Info</h3>
+
+          <!-- Full Name -->
+          <label for="fullName-Input" class="input-Label">Full Name</label>
+          <input
+            type="text"
+            id="fullName-Input"
+            class="form-input"
+            placeholder="Enter here"
+            value=""
+            required
+          />
+
+          <!-- Designation -->
+          <label for="designation-Input" class="input-Label">Designation</label>
+          <input
+            type="text"
+            id="designation-Input"
+            class="form-input"
+            placeholder="Enter here"
+            value=""
+            required
+          />
+
+          <!-- Profile Image -->
+          <label for="profileImage-Input" class="input-Label"
+            >Profile Image</label
+          >
+          <input
+            type="file"
+            id="profileImage-Input"
+            class="form-input"
+            accept="Image/png, Image/jpeg"
+            required
+          />
+
+          <!-- About Me Text Area-->
+          <label for="aboutMe-Input" class="input-Label">About Me</label>
+          <textarea
+            id="aboutMe-Input"
+            class="form-input"
+            rows="3"
+            placeholder="Enter here"
+            required
+          ></textarea>
+          <!-- Phone Number Input-->
+          <label for="phone-Input" class="input-Label">Phone Number</label>
+          <input
+            type="tel"
+            id="phone-Input"
+            class="form-input"
+            placeholder="Enter here"
+            value=""
+            required
+          />
+          <!-- Email Input -->
+          <label for="email-Input" class="input-Label">Email</label>
+          <input
+            type="email"
+            id="email-Input"
+            class="form-input"
+            placeholder="Enter here"
+            value=""
+            required
+          />
+          <!-- Address Input -->
+          <label for="address-Input" class="input-Label">Address</label>
+          <input
+            type="text"
+            id="address-Input"
+            class="form-input"
+            placeholder="Enter here"
+            value=""
+            required
+          />
+
+          <!-- Languages Known Section -->
+          <div class="form-Sec">
+            <!-- Input Section Heading -->
+            <h3 class="input-Heading">Languages Known</h3>
+            <!-- Language Input -->
+            <div id="lang-Div">
+              <input
+                type="text"
+                id="language-Input"
+                class="form-input"
+                placeholder="Enter here"
+                value=""
+                required
+              />
+            </div>
+            <!-- Add More Language Button -->
+            <button
+              onclick="addLanguageBtn()"
+              class="add-Button"
+              id="add-Lang-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delLanguageBtn()"
+              class="del-Button"
+              id="del-Lang-Btn"
+            >
+              Delete
+            </button>
+          </div>
+          <!-- Expertise Section -->
+          <div class="form-Sec">
+            <!-- Input Section Heading -->
+            <h3 class="input-Heading">Expertise</h3>
+            <!-- Expertise Input -->
+            <div id="expertise-Div">
+              <input
+                type="text"
+                id="expertise-Input"
+                class="form-input"
+                placeholder="Enter here"
+                value=""
+                required
+              />
+            </div>
+            <!-- Add More Expertise Button -->
+            <button
+              onclick="addExpertBtn()"
+              class="add-Button"
+              id="add-Expertise-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delExpertiseBtn()"
+              class="del-Button"
+              id="del-Expert-Btn"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+        <div class="form-Sec">
+          <!-- Experience Section -->
+          <div class="form-Sec" id="id-Experi-Sec">
+            <!-- Input Section Heading -->
+            <h3 class="input-Heading">Experience</h3>
+            <!-- Experience Input -->
+            <div class="experience-Sec">
+              <input
+                type="text"
+                id="experiencePosition-Input"
+                class="form-input"
+                placeholder="Enter your position title here"
+                value=""
+                required
+              />
+              <input
+                type="text"
+                id="experienceCompYear-Input"
+                class="form-input"
+                placeholder="Company Name / Jan 2020 - Dec 2021"
+                value=""
+                required
+              />
+              <textarea
+                id="experiencePara-Input"
+                class="form-input"
+                rows="3"
+                placeholder="Enter here"
+                required
+              ></textarea>
+            </div>
+            <!-- Add More Experience Button -->
+            <button
+              onclick="addExperienceBtn()"
+              class="add-Button"
+              id="add-Experi-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delExperienceBtn()"
+              class="del-Button"
+              id="del-Experi-Btn"
+            >
+              Delete
+            </button>
+          </div>
+
+          <!-- Education Section -->
+          <div class="form-Sec" id="id-Edu-Sec">
+            <!-- Input Section Heading -->
+            <h3 class="input-Heading">Education</h3>
+            <!-- Education Input -->
+            <div id="education-Sec">
+              <input
+                type="text"
+                id="educationInstitute-Input"
+                class="form-input"
+                placeholder="Name of Institute"
+                value=""
+                required
+              />
+              <input
+                type="text"
+                id="educationDegree-Input"
+                class="form-input"
+                placeholder="Enter Degree"
+                value=""
+                required
+              />
+              <input
+                type="text"
+                id="educationYear-Input"
+                class="form-input"
+                placeholder="Jan 2020 - Dec 2021"
+                value=""
+                required
+              />
+            </div>
+            <!-- Add More Education Button -->
+            <button
+              onclick="addEducationBtn()"
+              class="add-Button"
+              id="add-Education-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delEducationBtn()"
+              class="del-Button"
+              id="del-Education-Btn"
+            >
+              Delete
+            </button>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="form-Sec">
+            <!-- Input Section Heading -->
+            <h3 class="input-Heading">Skills</h3>
+            <!-- Skills Input -->
+            <div id="skill-div">
+              <input
+                type="text"
+                id="skills-Input"
+                class="form-input"
+                placeholder="Enter here"
+                value=""
+                required
+              />
+            </div>
+            <!-- Add More Skill Button -->
+            <button
+              onclick="addSkillsBtn()"
+              class="add-Button"
+              id="add-Skill-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delSkillBtn()"
+              class="del-Button"
+              id="del-Skill-Btn"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Buttons of Generating Download Link -->
+      <div class="buttons-Gen-Down-Link">
+        <!-- Button for Generating Resume -->
+        <button onclick="generateResume()" class="buttons" id="Generate-Resume">
+          Generate Resume
+        </button>
+        <!-- Button for Downloading PDF -->
+        <button class="buttons" id="Download-PDF">Download PDF</button>
+        <!-- Button for Creating Sharable Link -->
+        <button onclick="shareLink()" class="buttons" id="Share-Link">
+          Share Link
+        </button>
+      </div>
+
+      <!-- Customize Colors -->
+      <div class="buttons-Color">
+        <p class="color-Text">Change Colors:</p>
+        <input
+          type="color"
+          class="color-Styling"
+          id="Color-01"
+          value="#dc143c"
+        />
+        <input
+          type="color"
+          class="color-Styling"
+          id="Color-02"
+          value="#222a35"
+        />
+      </div>
+    </main>
+    <main class="container">
+      <!-- Resume Output -->
+      <main class="generate-Resume">
+        <!-- Resume Left Portion for About Me, Personal Info, Languages ETC. -->
+        <!-- Name & Designation for -->
+        <div class="section-Name">
+          <h1 class="name" contenteditable="true">Danish Bawany</h1>
+          <h3 class="designation" contenteditable="true">
+            Web Developer
+          </h3>
+        </div>
+        <section class="left-Portion">
+          <!-- Profile Image -->
+          <img src="Porfolio Image.jpg" alt="Profile Image" id="imgOutput" />
+
+          <!-- Name & Designation for Media -->
+          <div class="section-NameMQ">
+            <h1 class="name" contenteditable="true">Danish Bawany</h1>
+            <h3 class="designation" contenteditable="true">
+              Web Developer
+            </h3>
+          </div>
+
+          <!-- About Me -->
+          <h4 class="heading-AboutMe" contenteditable="true">About Me</h4>
+          <p class="para-AboutMe" contenteditable="true">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
+            exercitationem, ipsam sit, illo aliquam officia earum autem ad
+            nesciunt rem, sed necessitatibus beatae soluta nobis veritatis.
+            Voluptas repudiandae harum repellendus!
+          </p>
+
+          <!-- Contact Info -->
+          <div class="contact-Sec">
+            <div class="contact-Info">
+              <div class="info-Icon" id="icn1">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <p class="info-Text phone" contenteditable="true">
+                +92 333 123 4567
+              </p>
+            </div>
+
+            <div class="contact-Info">
+              <div class="info-Icon" id="icn2">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <p class="info-Text envelope" contenteditable="true">
+                youremail123@gmail.com
+              </p>
+            </div>
+
+            <div class="contact-Info">
+              <div class="info-Icon" id="icn3">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <p class="info-Text location" contenteditable="true">
+                Karachi, Sindh - Pakistan
+              </p>
+            </div>
+          </div>
+
+          <!-- Languages Known -->
+          <div class="languages-Sec">
+            <h4 class="heading-Language" contenteditable="true">Languages</h4>
+          </div>
+          <div class="languages-List">
+            <div class="list" id="lang-List">
+              <div class="dot"></div>
+              <p class="none" id="lang-p" contenteditable="true">English</p>
+            </div>
+          </div>
+
+          <!-- Expertise Known -->
+          <div class="expertise-Sec">
+            <h4 class="heading-Expertise" contenteditable="true">Expertise</h4>
+          </div>
+          <div class="expertise-list">
+            <div class="list" id="expertise-List">
+              <div class="dot"></div>
+              <p class="none" id="expertise-p" contenteditable="true">
+                English
+              </p>
+            </div>
+          </div>
+
+          <!-- Left Portions Ends Here -->
+        </section>
+        <!-- Resume Right Portion for Experience, Education & Skills -->
+        <section class="right-Portion">
+          <!-- Experience Section -->
+          <div class="section-Experience">
+            <h3 class="heading-Experience" contenteditable="true">
+              Experience
+            </h3>
+          </div>
+          <div class="add-Sec-Experience">
+            <h5 class="title-Experience" contenteditable="true">
+              Enter your position title here
+            </h5>
+            <p class="comp-Experience" contenteditable="true">
+              Company Name / Jan 2020 - Present
+            </p>
+            <p class="para-Experience" contenteditable="true">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+              aperiam facere repellendus dolor aliquam sint placeat, reiciendis
+              rerum expedita! Laborum quos quod pariatur eligendi deserunt, nemo
+              nisi dolores excepturi dicta.
+            </p>
+          </div>
+
+          <!-- Education Section -->
+          <div class="section-Education" id="eduGenResume">
+            <h3 class="heading-Education" contenteditable="true">Education</h3>
+          </div>
+          <div class="add-Sec-Education">
+            <h5 class="institute-Education" contenteditable="true">
+              University of Karachi
+            </h5>
+            <p class="degree-Education" contenteditable="true">
+              Master of Business Management
+            </p>
+            <p class="year-Education" contenteditable="true">
+              Jan 2020 - Dec 2023
+            </p>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="section-Skills" id="skillGenResume">
+            <h3 class="heading-Skills" contenteditable="true">Skills</h3>
+          </div>
+
+          <div class="skills-List-Sec">
+            <div id="skill-List">
+              <div class="dot-Skill"></div>
+              <p class="none" id="skill-p" contenteditable="true">English</p>
+            </div>
+          </div>
+          <!-- Right Portions Ends Here -->
+        </section>
+      </main>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
